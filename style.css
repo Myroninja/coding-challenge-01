@@ -1,0 +1,27 @@
+/* Global Styles */
+* {
+    font-family: Kreon, Calibri; /* Set each instance of text to use the selected font. */
+}
+/* --------------------------------------------------------- */
+
+/* Navigation Styles */
+.navigation a {
+    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+}
+/* --------------------------------------------------------- */
+
+/* Header Styles */
+
+/* --------------------------------------------------------- */
+
+/* Body Styles */
+
+/* --------------------------------------------------------- */
+
+/* Footer Styles */
+
+/* --------------------------------------------------------- */
+
+/* Media Queries */
+
+/* --------------------------------------------------------- */
