@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-GB">
     <head>
+        <!-- Page Title. -->
         <title> HC's Portfolio - Home </title>
         
+        <!-- CSS Style Sheet for external CSS. -->
         <link href="style.css" rel="stylesheet">
 
         <!-- Import font: 'Kreon'. -->
@@ -19,19 +21,52 @@
             href="https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap"
             rel="stylesheet"
         />
+
+        <!-- Import font: 'Font Awesome' for social media icons. -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        />
     </head>
 
+    <!-- Body section. -->
     <body>
+
+        <!-- Header section.
+         Use only for the navigation bar and nested elements. -->
         <header>
+            <a href="index.html">
+                <div class="logo-container">
+                    <img
+                        src="images/index/logo.png"
+                        alt="The logo of aspiring actor, artist, and musician Holly Clark."
+                        title="Holly Clark - Actor"
+                    />
+                </div>
+            </a>
+
+            <!-- Container for the tagline in the navigation bar. -->
+            <div class="tagline-container">
+                <!-- A shortquote with formatting tags for emphasis & styling. -->
+                <em><q><strong>Born</strong> for the <ins>spotlight</ins>!</q></em>
+            </div>
+
             <!-- Navigation for the top of each page. -->
             <nav class="navigation">
                 <ul class="nav-ul">
                     <li><a href="#"> About </a></li>
                     <li><a href="#"> Skills </a></li>
                     <li><a href="#"> Projects </a></li>
-                    <li><a href="#"> Contact </a></li>
+                    <li><a href="#"> Contact </a></li> <!-- Contact link placed last as per typical user experience. -->
                 </ul>
             </nav>
+
+            <!-- Container for the social media links in the navigation bar. -->
+            <div class="nav-socials">
+                <a id="twitter" href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a id="facebook" href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a id="instagram" href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
         </header>
 
         <main>
