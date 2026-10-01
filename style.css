@@ -37,7 +37,7 @@
     top: 0; /* Reset positioning from the top to 0/nothing */
     left: 0; /* To allow horizontal positioning on the page. */
     width: 100%; /* Percentage used to better support responsiveness, although that's not required as much in this challenge. */
-    padding: 30px 0px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
+    padding: 34px 0px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
     z-index: 998; /* Almost-maximum index level to ensure this element stays on top of others. */
     background-color: #000000; /* A basic and supportive colour that helps the images 'pop' on screen. */
     box-shadow: 0 8px 16px white; /* A clear and logical colour for navigation items for this design. */
@@ -60,7 +60,7 @@
 .navigation a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
     font-family: Kreon, Calibri; /* Ensure the font formatting applies to list items too. */
-    font-size: 32px; /* Desired font size. */
+    font-size: 26px; /* Desired font size. */
     font-weight: normal; /* Normal weight feels appropriate for purpose. */
     color: white; /* A subtle way to style the boundary between the fixed nav and the content that follows. */
     transition: color 0.3s, border-bottom 0.08s, border-top 0.08s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
@@ -69,8 +69,8 @@
 
 .navigation a:hover {
     color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
-    border-bottom: 25px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very bottom of the navigation bar. */
-    border-top: 30px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very top of the viewport.*/
+    border-bottom: 29px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very bottom of the navigation bar. */
+    border-top: 34px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very top of the viewport.*/
 }
 /* --------------------------------------------------------- */
 
@@ -80,6 +80,10 @@
 
 /* -------- Body Styles -------- */
 
+body {
+    background-color: #000000; /* A basic and supportive colour that helps the images 'pop' on screen. */
+}
+
 /* --------------------------------------------------------- */
 
 /* -------- Footer Styles -------- */
@@ -88,13 +92,13 @@
     display: flex; /* Used in combination with 'justify-content: end' to bring the content to the top-right corner. */
     justify-content: end; /* As above. */
     margin-top: 0; /* To ensure the container is flush to the top of the viewport. */
-    font-size: 50px; /* The size of each social media icon. */
+    font-size: 40px; /* The size of each social media icon. */
 }
 
 .nav-socials a { /* Styling applied to the anchor tags as they contain nested elements themselves (e.g. <i>). */
     color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
     z-index: 999; /* Placed above the navigation bar only. */
-    margin: 11px 8px 0 8px; /* Desired spacing between each icon. */
+    margin: 16px 12px 0 12px; /* Desired spacing between each icon. */
 }
 
 #twitter:hover {
