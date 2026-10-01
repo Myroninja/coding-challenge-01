@@ -67,38 +67,26 @@
     padding-bottom: 5px; /* Space between the list item and the respective mouse-hover borders. */
 }
 
-.navigation a:hover {
+.navigation #pages:hover { /* ID assigned to the page links to prevent the hover styling from applying to the social media icons. */
     color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
     border-bottom: 29px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very bottom of the navigation bar. */
     border-top: 34px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very top of the viewport.*/
 }
-/* --------------------------------------------------------- */
-
-/* -------- Header Styles -------- */
-
-/* --------------------------------------------------------- */
-
-/* -------- Body Styles -------- */
-
-body {
-    background-color: #000000; /* A basic and supportive colour that helps the images 'pop' on screen. */
-}
-
-/* --------------------------------------------------------- */
-
-/* -------- Footer Styles -------- */
 
 .nav-socials {
-    display: flex; /* Used in combination with 'justify-content: end' to bring the content to the top-right corner. */
-    justify-content: end; /* As above. */
-    margin-top: 0; /* To ensure the container is flush to the top of the viewport. */
-    font-size: 40px; /* The size of each social media icon. */
+    position: fixed; /* Maintain the container's position in the top-right of the viewport. */
+    top: 0; /* Reset positioning from the top to 0/nothing */
+    right: 0; /* To allow horizontal positioning on the page. */
+    margin-top: 0; /* To keep the container flush to the top of the viewport. */
+    padding-top: 23px; /* Desired positioning of the container within the navigation bar. */
+    padding-right: 10px; /* Desired positioning of the container within the navigation bar. */
 }
 
 .nav-socials a { /* Styling applied to the anchor tags as they contain nested elements themselves (e.g. <i>). */
     color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
     z-index: 999; /* Placed above the navigation bar only. */
     margin: 16px 12px 0 12px; /* Desired spacing between each icon. */
+    font-size: 40px; /* The size of each social media icon. */
 }
 
 #twitter:hover {
@@ -110,6 +98,43 @@ body {
 #instagram:hover { /* Changes to the specific brand colour of Instagram on mouse hover. */
     color: #c1558b;
 }
+/* --------------------------------------------------------- */
+
+/* -------- Header Styles -------- */
+
+/* --------------------------------------------------------- */
+
+/* -------- Body Styles -------- */
+
+body {
+    background-color: #f0f0f0; /* A basic and supportive colour that helps the images 'pop' on screen. */
+}
+
+main .bg-container {
+    margin-top: 56px; /* To ensure the content is not hidden behind the fixed navigation bar. */
+    margin-left: 18px; /* To ensure the content is not flush to the edges of the viewport. */
+    margin-right: 18px; /* To ensure the content is not flush to the edges of the viewport. */
+    margin-bottom: 50px; /* To ensure the content is not flush to the bottom edge of the viewport. */
+    border: 1px solid #EA2E80; /* A subtle border to help define the content area. */
+    border-radius: 8px; /* A stylistic choice to soften the edges of the content area. */
+
+    position: relative; /* To allow the nested elements to be positioned relative to this container. */
+    display: flex; /* Similar to the above. */
+    flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
+    justify-content: center; /* To ensure the content is centered vertically within the container. */
+    height: 100vh; /* To ensure the container takes up the full height of the viewport. */
+    padding: 2rem; /* To ensure the content is not flush to the edges of the container. */
+    background-image: url('images/index/hero-image.jpg'); /* The background image for the content area. */
+    background-size: cover; /* To ensure the background image covers the entire container. */
+    background-position: center; /* To ensure the background image is centered within the container. */
+    background-repeat: no-repeat; /* To ensure the background image does not repeat. */
+    box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
+}
+
+/* --------------------------------------------------------- */
+
+/* -------- Footer Styles -------- */
+
 /* --------------------------------------------------------- */
 
 /* -------- Media Queries -------- */
