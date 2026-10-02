@@ -1,6 +1,10 @@
 /* -------- Global Styles -------- */
 * {
-    font-family: Kreon, Calibri; /* Set each instance of text to use the selected font. */
+    font-family: Permanent Marker, Calibri; /* Set each instance of text to use the selected font. */
+}
+
+p {
+    font-size: 18px;
 }
 
 /* --------------------------------------------------------- */
@@ -27,9 +31,9 @@
 }
 
 .tagline-container q {
-    color: #EA2E80;
-    font-size: 22px;
-    font-weight: lighter;
+    color: #e09a9a; /* A colour that compliments the overall design and is consistent (enough) with the logo image. */
+    font-size: 22px; /* font size of choice to ensure the tagline is readable but not overpowering. */
+    font-weight: lighter; /* The thinner text helped give the tagline a snappy and light feel to it. */
 }
 
 .navigation {
@@ -40,7 +44,8 @@
     padding: 34px 0px; /* This is the desired space above and below the nav element, and no space either side as I want the width to cover 100% of the viewport. */
     z-index: 998; /* Almost-maximum index level to ensure this element stays on top of others. */
     background-color: #000000; /* A basic and supportive colour that helps the images 'pop' on screen. */
-    box-shadow: 0 8px 16px white; /* A clear and logical colour for navigation items for this design. */
+    border-bottom: 5px solid #ffffff; /* A strong line to establish a theme of white-glowing edges. */
+    box-shadow: 0 2px 4px #ffffff; /* A clear and logical colour for navigation items for this design. */
 }
 
 .navigation ul {
@@ -59,18 +64,18 @@
 
 .navigation a {
     text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
-    font-family: Kreon, Calibri; /* Ensure the font formatting applies to list items too. */
+    font-family: Permanent Marker, Calibri; /* Ensure the font formatting applies to list items too. */
     font-size: 26px; /* Desired font size. */
-    font-weight: normal; /* Normal weight feels appropriate for purpose. */
+    font-weight: lightest; /* A light weight feels appropriate for purpose. */
     color: white; /* A subtle way to style the boundary between the fixed nav and the content that follows. */
     transition: color 0.3s, border-bottom 0.08s, border-top 0.08s; /* To change the text colour and show coloured borders above and below - will be triggered by mouse hover. */
     padding-bottom: 5px; /* Space between the list item and the respective mouse-hover borders. */
 }
 
 .navigation #pages:hover { /* ID assigned to the page links to prevent the hover styling from applying to the social media icons. */
-    color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
-    border-bottom: 29px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very bottom of the navigation bar. */
-    border-top: 34px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very top of the viewport.*/
+    color: #e09a9a; /* The same colour from the tagline text for consistency. */
+    border-bottom: 30px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very bottom of the navigation bar. */
+    border-top: 35px solid white; /* A solid white block when the mouse is hovered. Sized to reach the very top of the viewport.*/
 }
 
 .nav-socials {
@@ -83,7 +88,7 @@
 }
 
 .nav-socials a { /* Styling applied to the anchor tags as they contain nested elements themselves (e.g. <i>). */
-    color: #EA2E80; /* The exact hexidecimal colour from the logo image for consistency. */
+    color: #e09a9a; /* The same colour from the tagline text for consistency. */
     z-index: 999; /* Placed above the navigation bar only. */
     margin: 16px 12px 0 12px; /* Desired spacing between each icon. */
     font-size: 40px; /* The size of each social media icon. */
@@ -102,26 +107,47 @@
 
 /* -------- Header Styles -------- */
 
+h1 {
+    font-size: 68px; /* Desired font size. */
+    font-weight: normal; /* Desired font weight. */
+    color: #000000; /* Complete contrast from the container background colour to ensure immediate readability. */
+    margin: 0; /* Reset any browser-default margins. */
+}
+
+.header-container h1 {
+    border-bottom: 6px solid #ffffff; /* Colour of choice for the underline to match the overall theme of the design. */
+    padding-bottom: 0px; /* The perfect distance for the desirted effect with the border underline. */
+    box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
+    display: inline-block; /* To ensure the border-bottom is only applied to the text and not the entire width of the container. */
+    line-height: 1.3; /* To ensure the text is not too close to the border-bottom. */
+}
+
+h2 {
+    font-size: 38px; /* Desired font size. */
+    font-weight: normal; /* Desired font weight. */
+    color: #000000; /* Complete contrast from the container background colour to ensure immediate readability. */
+    margin: 0; /* Reset any browser-default margins. */
+}
 /* --------------------------------------------------------- */
 
 /* -------- Body Styles -------- */
 
 body {
-    background-color: #f0f0f0; /* A basic and supportive colour that helps the images 'pop' on screen. */
+    background-color: #e09a9a; /* Maintaining the same colour throughout the page. */
 }
 
 main .bg-container {
-    margin-top: 56px; /* To ensure the content is not hidden behind the fixed navigation bar. */
+    margin-top: 126px; /* To ensure the content is not hidden behind the fixed navigation bar. */
     margin-left: 18px; /* To ensure the content is not flush to the edges of the viewport. */
     margin-right: 18px; /* To ensure the content is not flush to the edges of the viewport. */
     margin-bottom: 50px; /* To ensure the content is not flush to the bottom edge of the viewport. */
-    border: 1px solid #EA2E80; /* A subtle border to help define the content area. */
-    border-radius: 8px; /* A stylistic choice to soften the edges of the content area. */
-
+    border: 2px solid #ffffff; /* A strong border to help define the content area. */
+    border-radius: 12px; /* A stylistic choice to soften the edges of the content area. */
+    box-shadow: inset 0 0 2px 3px #ffffff, 0 0 4px 2px #ffffff; /* A stylistic choice to add depth to the content area with both an inset and external drop shadow in white. */
     position: relative; /* To allow the nested elements to be positioned relative to this container. */
     display: flex; /* Similar to the above. */
     flex-direction: column; /* To allow the nested elements to be positioned in a vertical stack. */
-    justify-content: center; /* To ensure the content is centered vertically within the container. */
+    justify-content: start; /* To ensure the content is centered vertically within the container. */
     height: 100vh; /* To ensure the container takes up the full height of the viewport. */
     padding: 2rem; /* To ensure the content is not flush to the edges of the container. */
     background-image: url('images/index/hero-image.jpg'); /* The background image for the content area. */
@@ -129,6 +155,82 @@ main .bg-container {
     background-position: center; /* To ensure the background image is centered within the container. */
     background-repeat: no-repeat; /* To ensure the background image does not repeat. */
     box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
+}
+
+main .header-box {
+    width: 540px; /* Desired width of the container. */
+    padding: 25px 25px 35px 25px; /* To ensure the content is not flush to the edges of the container. */
+    border-radius: 12px; /* A stylistic choice to soften the edges of the content area. */
+    margin-top: 175px; /* To ensure the container is positioned appropriately within the parent container. */
+    margin-left: 25px; /* To ensure the container is positioned appropriately within the parent container. */
+    border: 5px solid #000000; /* A strong border to help define the content area. */
+    background-color: rgba(251, 132, 95, 0.371); /* Great contrast for the header text to ensure immediate readability. */
+    box-shadow: 0 0 2px 2px #000000; /* to soften the edges of the content area. */
+    box-shadow: 5px 5px 5px 0 #323232; /* A stylistic choice to add depth to the content area. */
+    transition: border 0.3s, box-shadow 0.3s; /* Allows the border and box-shadow to change smoothly when the mouse is hovered over the container. */
+}
+
+.header-box:hover {
+    box-shadow: 0 0 1px 1px #ffffff; /* A slightly glowing effect to subtly inform the user that their mouse is hovering over the container. */
+    border: 5px solid #ffffff; /* As above. */
+}
+
+main .under-header-box {
+    margin: 0; /* Reset any browser-default margins. */
+    margin-left: 25px; /* To ensure the container is positioned appropriately within the parent container. */
+    margin-top: 10px; /* To ensure the container is positioned appropriately below the header container. */
+    display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
+    width: 440px; /* Desired width of the container. */
+    padding: 0; /* To ensure the content is flush to the edges of the container. */
+}
+
+main .paragraph-box {
+    width: 440px; /* Desired width of the container. */
+    padding: 15px 25px 25px 25px; /* To ensure the content is not flush to the edges of the container. */
+    background-color: rgba(253, 246, 250, 0.532); /* Great contrast for the text to ensure immediate readability. */
+    border-radius: 12px; /* A stylistic choice to soften the edges of the content area. */
+    border: 5px solid #000000; /* A strong border to help define the content area. */
+    box-shadow: 5px 5px 5px 0 #323232; /* A stylistic choice to add depth to the content area. */
+    display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
+    flex-direction: column; /* Arrange the nested elements in a vertical stack. */
+    transition: border 0.3s, box-shadow 0.3s; /* Allows the border and box-shadow to change smoothly when the mouse is hovered over the container. */
+}
+
+.paragraph-box:hover {
+    box-shadow: 0 0 1px 1px #ffffff; /* A slightly glowing effect to subtly inform the user that their mouse is hovering over the container. */
+    border: 5px solid #ffffff; /* As above. */
+}
+
+main .paragraph-box p {
+    width: 100%; /* To ensure the <p> element takes up the full width of the container. */
+}
+
+.read-more {
+    background-color: rgba(251, 132, 95, 0.371); /* A simple button colour that complements the overall design. */
+    align-self: flex-end; /* Moves the button from the botom left of the flex-column to the bottom right. */
+    padding: 0px 10px; /* Desired padding for the button. */
+    border-radius: 12px; /* A stylistic choice to soften the edges of the button. */
+    border: 3px solid #000000; /* A strong border to help define the button area. */
+    box-shadow: 5px 5px 5px 0 #323232; /* A stylistic choice to add depth to the button. */
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; /* To change the button colour - will be triggered by mouse hover. */
+}
+
+.read-more a {
+    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+    color: #000000; /* A colour that compliments the overall design. */
+    font-size: 26px; /* Desired font size. */
+    font-weight: 100; /* A light weight feels appropriate for purpose. */
+    transition: color 0.3s; /* To change the text colour - will be triggered by mouse hover. */
+}
+
+.read-more:hover {
+    background-color: rgba(251, 131, 95, 0.501); /* A colour that compliments the overall design and is consistent with the surrounding containers. */
+    border: 3px solid #ffffff; /* A colour that compliments the overall design. */
+    box-shadow: 0 0 5px 2px #ffffff;
+}
+
+.read-more:hover a {
+    color: #ffffff; /* A colour that compliments the overall design. */
 }
 
 /* --------------------------------------------------------- */
