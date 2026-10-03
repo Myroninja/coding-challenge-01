@@ -134,10 +134,11 @@ h2 {
 
 body {
     background-color: #e09a9a; /* Maintaining the same colour throughout the page. */
+    margin: 0; /* Reset any browser-default margins. */
 }
 
 main .bg-container {
-    margin-top: 126px; /* To ensure the content is not hidden behind the fixed navigation bar. */
+    margin-top: 131px; /* To ensure the content is not hidden behind the fixed navigation bar. */
     margin-left: 18px; /* To ensure the content is not flush to the edges of the viewport. */
     margin-right: 18px; /* To ensure the content is not flush to the edges of the viewport. */
     margin-bottom: 50px; /* To ensure the content is not flush to the bottom edge of the viewport. */
@@ -211,8 +212,8 @@ main .paragraph-box p {
     align-self: flex-end; /* Moves the button from the botom left of the flex-column to the bottom right. */
     padding: 0px 10px; /* Desired padding for the button. */
     border-radius: 12px; /* A stylistic choice to soften the edges of the button. */
-    border: 3px solid #ffffff; /* A strong border to help define the button area. */
-    box-shadow: 0 0 2px 1px #ffffff; /* To slightly soften the edges of the button before it is clicked. */
+    border: 3px solid #000000; /* A strong border to help define the button area. */
+    box-shadow: 0 0 2px 1px #000000; /* To slightly soften the edges of the button before it is clicked. */
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; /* To change the button colour - will be triggered by mouse hover. */
 }
 
@@ -276,6 +277,82 @@ main .paragraph-box p {
 
 /* -------- Footer Styles -------- */
 
+footer {
+    background-color: #000000; /* Paired with the navigation bar to create a sense of balance and symmetry. */
+    height: 180px; /* A height that is appropriate for the content within the footer. */
+    box-shadow: 0 0 14px 14px #000000; /* A faded boundary between the body and footer. */
+    color: #bababa; /* Less contrast needed here for the 'fine print'. */
+}
+
+.footer-index div {
+    display: flex; /* Enable the abilty to position nested elements to my liking. */
+    margin: 60px 10px 0px 10px; /* Move the div far enough down the footer element. */
+    width: 100%; /* Have the container span the entire width of the viewport. */
+    justify-content: center; /* Bring the content to the center of the viewport. */
+    align-items: center; /* As above, but vertically. */
+}
+
+.footer-index {
+    top: 0; /* Reset positioning from the top to 0/nothing */
+    left: 0; /* To allow horizontal positioning on the page. */
+    margin: 0; /* Reset default margins to zero. */
+    padding: 0; /* Desired spacing around the list. */
+    display: flex; /* Enable the abilty to position nested elements to my liking. */
+    width: 100%; /* Have the list span the entire width of the viewport. */
+    list-style: none; /* Remove default list formatting. */
+    justify-content: center; /* Bring the content to the center of the viewport. */
+    align-items: center; /* As above, but vertically. */
+}
+
+.footer-index div li {
+    margin: 0 28px; /* Desired spacing between each list item. */
+}
+
+.footer-index div a {
+    font-size: 26px; /* Desired font size. */
+    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+    color: #e09a9a; /* Desired colour for the footer nav options. */
+    transition: color 0.3s; /* Allows the text colour to transition over a desired period of time. */
+}
+
+.footer-index div a:hover {
+    color: #ffffff; /* Desired colour of text once hovered. */
+}
+
+.footer-socials {
+    margin: 10px 10px 0px 10px; /* Sits the social icons just below the main body background. */
+    padding-bottom: 50px; /* As above. */
+    font-size: 26px; /* Desired icon size. */
+    align-self: flex-end; /* Places the icons at the far right of the screen. */
+    width: 150px; /* Creates enoguh width for the container to have all three icons sit in a row. */
+}
+
+.footer-socials a {
+    color: #e09a9a; /* Desired colour of the social icons. */
+    margin: 0 5px; /* Spacing between each icon. */
+    transition: color 0.3s; /* Allows the icon colour to transition over a desired period of time. */
+}
+
+.footer-copyright {
+    display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
+    top: 0; /* Reset positioning from the top to 0/nothing */
+    left: 0; /* To allow horizontal positioning on the page. */
+    margin: 0; /* Reset default margins to zero. */
+    justify-content: space-between; /* Space the two list items on either side of the viewport. */
+    align-items: center; /* As above, but vertically. */
+    width: 100%; /* Stretch the element across the full width of the viewport. */
+    padding: 0px 0px 0px 0px; /* Desired spacing around the list. */
+    list-style: none; /* Remove default list formatting. */
+}
+
+.footer-copyright li {
+    margin: 0 8px; /* Create spacing between the two list items. */
+}
+
+.footer-copyright p {
+    width: 150px; /* Had previously used &nbsp; in the HTML, but I wanted to test the default behaviour of the text if given enough room. */
+    text-align: center; /* Ensure the text is in the middle of the <p> element. */
+}
 /* --------------------------------------------------------- */
 
 /* -------- Media Queries -------- */
