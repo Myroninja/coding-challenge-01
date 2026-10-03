@@ -179,13 +179,13 @@ main .under-header-box {
     margin: 0; /* Reset any browser-default margins. */
     margin-left: 25px; /* To ensure the container is positioned appropriately within the parent container. */
     margin-top: 10px; /* To ensure the container is positioned appropriately below the header container. */
-    display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
+    display: inline-block; /* To allow the paragraph container and button containers to be stacked vertically. */
     width: 440px; /* Desired width of the container. */
     padding: 0; /* To ensure the content is flush to the edges of the container. */
 }
 
 main .paragraph-box {
-    width: 440px; /* Desired width of the container. */
+    width: 540px; /* Desired width of the container. */
     padding: 15px 25px 25px 25px; /* To ensure the content is not flush to the edges of the container. */
     background-color: rgba(253, 246, 250, 0.532); /* Great contrast for the text to ensure immediate readability. */
     border-radius: 12px; /* A stylistic choice to soften the edges of the content area. */
@@ -194,6 +194,7 @@ main .paragraph-box {
     display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
     flex-direction: column; /* Arrange the nested elements in a vertical stack. */
     transition: border 0.3s, box-shadow 0.3s; /* Allows the border and box-shadow to change smoothly when the mouse is hovered over the container. */
+    box-sizing: border-box; /* To ensure the padding and border are included in the total width and height of the container. */
 }
 
 .paragraph-box:hover {
@@ -210,8 +211,8 @@ main .paragraph-box p {
     align-self: flex-end; /* Moves the button from the botom left of the flex-column to the bottom right. */
     padding: 0px 10px; /* Desired padding for the button. */
     border-radius: 12px; /* A stylistic choice to soften the edges of the button. */
-    border: 3px solid #000000; /* A strong border to help define the button area. */
-    box-shadow: 5px 5px 5px 0 #323232; /* A stylistic choice to add depth to the button. */
+    border: 3px solid #ffffff; /* A strong border to help define the button area. */
+    box-shadow: 0 0 2px 1px #ffffff; /* To slightly soften the edges of the button before it is clicked. */
     transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; /* To change the button colour - will be triggered by mouse hover. */
 }
 
@@ -224,15 +225,53 @@ main .paragraph-box p {
 }
 
 .read-more:hover {
-    background-color: rgba(251, 131, 95, 0.501); /* A colour that compliments the overall design and is consistent with the surrounding containers. */
-    border: 3px solid #ffffff; /* A colour that compliments the overall design. */
-    box-shadow: 0 0 5px 2px #ffffff;
+    background-color: rgba(251, 131, 95, 0.501); /* Becomes less transparent to indicate it is in focus. */
+    border: 3px solid #000000; /* A contrasting border to highlight the button. */
+    box-shadow: 5px 5px 5px 0 #323232, 0 0 4px 1px inset #000000; /* Creates the effect of the button hovering/lifting once hovered. */
 }
 
 .read-more:hover a {
     color: #ffffff; /* A colour that compliments the overall design. */
 }
 
+.under-header-buttons-box {
+    display: flex; /* To allow the nested elements to be positioned in various ways relative to each other. */
+    width: 540px; /* Desired width of the container. */
+    margin-top: 10px; /* To ensure the container is positioned appropriately below the paragraph container. */
+    padding: 0px; /* To ensure the content is flush to the edges of the container. */
+    gap: 10px; /* To ensure the buttons are not flush to each other. */
+}
+
+.portfolio-button,
+.services-button {
+    flex: 1; /* To ensure the buttons take up equal space within the flex container. */
+    background-color: rgba(143, 151, 91, 0.875); /* An attempt to draw in a teriary colour from the lollipop in the hero image. */
+    border-radius: 12px; /* A stylistic choice to soften the edges of the button. */
+    border: 5px solid #000000; /* A strong border to help define the button area. */
+    box-shadow: 5px 5px 5px 0 #323232; /* To slightly soften the edges of the button before it is clicked. */
+    transition: background-color 0.3s, border 0.3s, box-shadow 0.3s; /* To change the button colour - will be triggered by mouse hover. */
+}
+
+.portfolio-button a,
+.services-button a {
+    text-decoration: none; /* Remove default formatting from anchor tags (e.g. underline). */
+    color: #ffffff; /* A clear and readable colour for the text. */
+    font-size: 26px; /* Desired font size. */
+    font-weight: 100; /* A light weight feels appropriate for purpose. */
+    transition: color 0.3s; /* To change the text colour - will be triggered by mouse hover. */
+}
+
+.portfolio-button:hover,
+.services-button:hover {
+    background-color: rgba(143, 151, 91, 0.325); /* Becomes more transparent to emphasise the glowing edges when hovering. */
+    border: 5px solid #ffffff; /* A contrasting border to highlight the button. */
+    box-shadow: 0 0 5px 0 #ffffff, 0 0 4px 1px inset #ffffff; /* Creates the effect of the button glowing once hovered. */
+}
+
+.portfolio-button:hover a,
+.services-button:hover a {
+    color: #000000; /* A contrasting colour for the text when the button is hovered. */
+}
 /* --------------------------------------------------------- */
 
 /* -------- Footer Styles -------- */
